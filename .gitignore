@@ -1,0 +1,9 @@
+*.log
+*.jou
+*binary_container_1
+*packaged_kernel_DPUCZDX8G_hw_mpsoc
+*tmp_kernel_pack_DPUCZDX8G_hw_mpsoc
+*project
+*.bif
+*xsct
+*xilinx_kv260_ispMipiRx_vcu_DP_202410_1
