@@ -1,6 +1,6 @@
 # valid platforms / overlays
 PFM_LIST += kv260_ispMipiRx_vcu_DP kv260_vcuDecode_vmixDP kv260_ispMipiRx_vmixDP kv260_ispMipiRx_rpiMipiRx_DP kv260_bist
-OVERLAY_LIST += smartcam aibox-reid defect-detect nlp-smartvision benchmark
+OVERLAY_LIST += smartcam aibox-reid defect-detect nlp-smartvision benchmark smaller_benchmark
 FW_LIST += kv260-smartcam kv260-aibox-reid kv260-defect-detect kv260-nlp-smartvision kv260-benchmark kv260-bist
 
 # overrides based on firmware name
@@ -22,6 +22,10 @@ endif
 ifeq ($(FW),kv260-bist)
   override PFM = kv260_bist
 endif
+ifeq ($(FW),kv260-smaller_benchmark)
+  override OVERLAY = smaller_benchmark
+endif
+
 
 # overrides bassed on overlay name
 ifeq ($(OVERLAY),smartcam)
@@ -40,3 +44,6 @@ ifeq ($(OVERLAY),benchmark)
   override PFM = kv260_ispMipiRx_vcu_DP
 endif
 
+ifeq ($(OVERLAY),smaller_benchmark)
+  override PFM = kv260_ispMipiRx_vcu_DP
+endif
